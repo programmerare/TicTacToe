@@ -1,0 +1,298 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+  font-size: 1rem;
+  font-family: Roboto;
+}
+
+td{
+  border:1px solid darkgray;   
+}
+table{
+  
+  aspect-ratio: 1/1;
+  border:1px solid darkgray;
+  border-collapse: collapse;
+}
+
+
+@media (min-width: 1182px) {
+  html{
+    font-size: 22px;
+}
+    body{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    main{
+        width: 70%;
+    }
+    .jumbotron{
+        background-color: #DEDEDE;
+        padding: 10px;
+        
+    }
+    .text-center{
+        margin: auto;
+    }
+    .text-center>h1,p {
+        text-align: center;
+    }
+    #errorMsg{
+        font-size: 1rem;
+    }
+    aside{
+        width: 300px;
+        height: auto;
+    }
+    #div-in-form{
+        border: solid 1px black;
+        border-radius: 5px;
+        box-shadow: 0px 5px 10px 5px lightgray;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 20px;
+        padding-left: 10px;
+        padding-right: 0;
+        margin-top: 25px;
+    }
+  
+    .col{
+        width: 49%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-right: 1%;
+    }
+    input{
+        width: 100%;
+    }
+    input[type="color"]{
+        background-color: white;
+    }
+    label{
+        display: block;
+    }
+    #div-with-a{
+        border: 2px solid deepskyblue;
+        border-radius: 5px;
+        padding: 5px;
+        margin-top: 10px;
+    }
+    #div-with-a:hover{
+        box-shadow: skyblue 0px 0px 3px 3px;
+    }
+    #div-with-a>a{
+        text-decoration: none;
+        color: deepskyblue;
+    }
+    aside>a>img{
+        width: 100%;
+    }
+   table{
+    margin-top: 1rem;
+    margin-left: 5rem;
+   }
+    td{
+      width: 200px;
+      height:200px;
+      font-size: 50px;
+      text-align: center;
+    }
+}
+
+
+@media (min-width: 415px) and (max-width: 1182px){
+  html{
+      font-size: 18px;
+  }
+  body{
+      display: flex;
+      justify-content: center;
+      height: 100vh;
+  }
+  main{
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .text-center{
+      text-align: center;
+  }
+  aside{
+      border: 1px solid black;
+      display: block;
+      width: 30%;
+      height: 300px;
+      margin-left: 0.5rem;
+  }
+  aside>a>img{
+      width: 100%;
+      height: 100%;
+  }
+  .jumbotron{
+      width: 100%;
+      background-color: #DEDEDE;
+      padding: 1.5rem;
+      border-radius: 0.3rem;
+      margin: 0;
+      margin-bottom: 1rem;
+  }
+  /* form */
+  form{
+      border-radius: 0.3rem;
+      padding: 1rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 10px 10px 20px rgba(0,0,0,0.125);
+  }
+  #div-in-form{
+      width: 100%;
+  }
+  #div-in-form div.col{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+  }
+  #div-in-form input{
+      border: 1px solid silver;
+      border-radius: 0.25rem;
+      width: 100%;
+      padding: 0.5rem;
+      outline: none;
+  }
+  #div-in-form input[type="text"]:focus{
+      border-color: dodgerblue;
+      outline: none;
+      box-shadow: 0 0 0 3px dodgerblue;
+  }
+  #div-in-form input[type="color"]{
+      background-color: white;
+  }
+  #div-with-a{
+      display:flex;
+      justify-content: flex-end;
+      margin-top: 1rem;
+  }
+  #div-with-a > a{
+      background-color: dodgerblue;
+      color:white;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      height: 2rem;
+      text-align: center;
+      font-weight: bold;
+      padding: 0.5rem;
+  }
+  /* game area */
+  div.gameArea{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  table{
+    border-spacing: 0;
+    width:100%;
+    margin-top: 1rem;
+    
+  }
+  td{
+    width: 125px;
+    height:125px;
+    font-size: 50px;
+    text-align: center;
+  }
+}
+
+
+
+@media (max-width:415px)
+{
+  html{
+      font-size:16px;
+  }
+  body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+  aside{
+    display:none;
+  }
+  .jumbotron{
+    background-color:  #DEDEDE;
+    padding:1.5rem;
+    border-radius: 0.3rem;
+    margin: 0;
+    margin-bottom: 1rem;
+    
+  }
+  .text-center{
+    text-align: center;
+  }
+  form{
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.125);
+    padding:1rem;
+    border-radius: 0.5rem;
+    border: solid 1px silver;
+    margin-bottom:1rem; 
+  }
+  form>div>.col{
+    display:flex;
+    flex-direction: column;
+  }
+  input[type="text"]
+  {
+    height: 2rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid silver;
+    border-radius: 0.25rem;
+  }
+  input[type="text"]:focus{
+   
+    outline: none;
+    border-color: dodgerblue;
+    box-shadow: 0 0 0 3px dodgerblue;
+   
+  }
+  input[type="color"]{
+    width:100%;
+    background-color: white;
+    margin-bottom: 0.5rem;
+    border: 1px solid silver;
+    border-radius: 0.25rem;
+  }
+  #div-with-a{
+    display:flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+  }
+  #div-with-a > a{
+    background-color: dodgerblue;
+    color:white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    height: 2rem;
+    min-width: 35%;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.5rem;
+
+  }
+  table{
+    border-spacing: 0;
+    width:100%;
+    
+  }
+  td{
+    width: 125px;
+    height:125px;
+    font-size: 50px;
+    text-align: center;
+  }
+}

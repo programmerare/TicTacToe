@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 16px;
+}
+
+body{
+  font-family: Roboto;
+
+  height: 100vh;
+  margin: 1rem;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+}
+
+.jumbotron{
+  background-color: #DEDEDE;
+  border-radius: 0.3rem;
+  padding: 1.5rem;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.d-none{
+  display: none !important;
+}
+
+.errorMsg{
+  color: red;
+}
+
+/* form */
+form{
+  border: 1px solid grey;
+  border-radius: 0.3rem;
+  box-shadow: 2px 2px 20px 2px silver;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+#div-in-form .col{
+  display: flex;
+  flex-direction: column;
+}
+
+#div-in-form input{
+  border: 1px solid silver;
+  border-radius: 0.3rem;
+
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+
+  background-color: white;
+}
+
+#div-in-form input:focus{
+  outline: none;
+  box-shadow: 0 0 2px 1px dodgerblue;
+}
+
+/* 
+Source: https://medium.com/@sadhananagori18/how-to-remove-input-type-color-extra-space-from-background-4a751fd4d76a
+Author: Sadhana Nagori
+The following three applied style adjustments are used to change the default style of the color picker in order to meet our needs.
+By default, but also depending on the browser, the color picker has its own border and some padding applied to it thus resulting in the color not filling out
+    the entire input field. In the following we remove the border and padding and round the corners of the actual colored rectangle thus effectively
+    filling the entire input field with the choosen color.
+This may not apply to all browsers!
+*/
+#div-in-form input[type="color"]{
+  appearance: none;   /* remove default styling applied by the browser */
+  padding: 0;
+}
+
+#div-in-form input[type="color"]::-webkit-color-swatch-wrapper{
+  padding: 0;   /* style the color picker - remove padding */
+}
+
+#div-in-form input[type="color"]::-webkit-color-swatch{
+  border: none;   /* style the color picker - remove border */
+  border-radius: 0.3rem;  /* style the color picker - round edges */
+}
+
+/* submit button */
+#div-with-a{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 0.3rem;
+}
+
+#div-with-a a{
+  background-color: dodgerblue;
+  border-radius: 0.3rem;
+  color: white;
+  text-decoration: none;
+  padding: 0.3rem;
+  margin: 0.5rem;
+}
+
+/* checkbox */
+#div-in-form input[type="checkbox"]{
+  padding: 0;
+  margin: 0.5rem;
+  width: 0.7rem;
+  height: 0.7rem;
+}
+
+/* aside */
+aside{
+  display: none;
+  margin-left: 1rem;
+}
+
+aside img{
+  width: 100%;
+}
+
+/* game area */
+#game-area{
+  display: flex;
+  justify-content: center;
+}
+
+table{
+  border-spacing: 0;
+}
+ table td{
+  width: 125px;
+  height: 125px;
+  font-size: 50px;
+  border: 1px solid darkgrey;
+  text-align: center;
+}
+
+@media (min-width: 415px) and (max-width: 1180px){
+  html{
+    font-size: 18px;
+  }
+
+  main{
+    width: 50%;
+  }
+
+  /* aside */
+  aside{
+    display: inline;
+    width: 30%;
+  }
+}
+
+@media (min-width: 1181px){
+  html{
+    font-size: 22px;
+  }
+
+  main{
+    width: 70%;
+  }
+
+  /* form */
+  #div-in-form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  #div-in-form .col{
+    width: 49%;
+  }
+  
+  #div-with-a a{
+    background-color: white;
+    border: 1px solid dodgerblue;
+    color: dodgerblue;
+  }
+
+  #div-with-a a:hover{
+    text-decoration: underline;
+  }
+
+  /* aside */
+  aside{
+    display: inline;
+    width: 300px;
+  }
+
+  /* game area */
+  table td{
+    width: 200px;
+    height: 200px;
+  }
+}
